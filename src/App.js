@@ -9,7 +9,7 @@ function App() {
       <NavBar title="Tienda Online" />
     </div>
     <div>
-      <Catalogo title="Futuro Catálogo" />
+      <Catalogo title="Catálogo" />
     </div>
     </>
   );

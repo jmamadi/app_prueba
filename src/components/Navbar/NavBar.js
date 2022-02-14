@@ -23,13 +23,13 @@ const NavBar = ({ title, ...rest }) => { //{ title: 'ecommerce ', color='red'}
             <img src={'./images/logo.png'} alt='logo'/>
         </div>
         <h3>{title}</h3>
-        <div>
-          <CartWidget />
-        </div>
         <div className="Categories">
           <Button handleClick={handleCafe}>Cafe</Button>
           <Button handleClick={handleTazas}>Tazas</Button>
           <Button handleClick={handleDesayunos}>Desayunos</Button>
+        </div>
+        <div>
+          <CartWidget />
         </div>
       </nav>
   )
