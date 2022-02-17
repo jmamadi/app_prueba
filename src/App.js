@@ -1,15 +1,22 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Catalogo from './components/Catalogo/Catalogo';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
+
+/*  BORRAR
+import Counter from './components/Counter/Counter';
+import Navbar from './components/Navbar/Navbar';
+*/
 
 function App() {
+  const addToCart = (number) => {
+    console.log(`Se agregaron al carrito ${number} items`);
+  };
   return (
     <>
     <div className="App">
-      <NavBar title="Tienda Online" />
-    </div>
-    <div>
-      <Catalogo title="Catálogo" />
+    <NavBar title="Tienda Online" />
+    <ItemListContainer title="Catalogo" />
     </div>
     </>
   );
