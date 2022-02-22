@@ -1,34 +1,28 @@
+import React from 'react'
 import { useEffect, useState } from 'react';
 import { traerProductos } from '../../mock/products';
 import ItemList from '../ItemList/ItemList';
 
-const ItemListContainer = ({ title }) => {
+const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        traerProductos
-            .then((res) => {
-                setProducts(res);
+        traerProductos().then(item => {
+                setProducts(item);
+            }).catch((err) => {
+                console.log(err);
             })
-            .catch((error) => {
-                console.log(error);
+
+            return (() => {
+                setProducts()
             })
-            .finally(() => {
-                setLoading(false);
-            });
+
     }, []);
 
     return (
-        <>
-            {loading ? (
-                <h1>Cargando...</h1>
-            ) : (
-                <>
-                    <ItemList products={products} />
-                </>
-            )}
-        </>
+        <div>
+            <ItemList products={products} />
+        </div>
     );
 };
 

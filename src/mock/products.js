@@ -7,6 +7,7 @@ export const products = [
     { id: 6, name: 'Desayuno Premium', stock: 13, price: 3000, img: './images/desayuno.png', descripcion: 'En ese día tan especial, regalale la mejor sorpresa a es ser que tanto queres', category: 'Desayunos'},
 ];
 
+/*
 export const traerProductos = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(products);
@@ -18,3 +19,21 @@ export const traerProducto = new Promise((resolve, reject) => {
         resolve(products[0]);
     }, 2000);
 });
+*/
+
+export const traerProductos = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products)
+        }, 500)
+    })
+}
+
+export const traerProducto = (id) => {
+    return new Promise((resolve) => {
+        const prod = products.find(p => p.id === parseInt(id))
+        setTimeout(() => {
+            resolve(prod)
+        }, 1000)
+    })
+}

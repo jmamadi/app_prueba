@@ -1,35 +1,29 @@
 import { useEffect, useState } from 'react';
 import { traerProducto } from '../../mock/products';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom'
 
 
-const ItemDetailContainer = ({ title }) => {
-    const [products, setProduct] = useState([]);
-    const [loading, setLoading] = useState(true);
+const ItemDetailContainer = () => {
+    const [product, setProduct] = useState();
+    const { productId } = useParams();
 
     useEffect(() => {
-        traerProducto
-            .then((res) => {
-                setProduct(res);
+        traerProducto(productId).then(item => {
+                setProduct(item);
             })
-            .catch((error) => {
-                console.log(error);
+            .catch(err => {
+                console.log(err);
             })
-            .finally(() => {
-                setLoading(false);
+            return (() => {
+                setProduct();
             });
-    }, []);
+    }, [productId]);
 
     return (
-        <>
-            {loading ? (
-                <h1>Cargando...</h1>
-            ) : (
-                <>
-                    <ItemDetail products={products} />
-                </>
-            )}
-        </>
+        <div>
+            <ItemDetail product={product} />
+        </div>
     );
 };
 
