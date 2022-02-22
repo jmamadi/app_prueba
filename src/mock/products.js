@@ -11,5 +11,31 @@ export const products = [
 export const traerProductos = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(products);
-    }, 2000);
+    }, 1000);
 });
+
+export const traerProducto = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(products[0]);
+    }, 3000);
+});
+
+
+/*
+export const traerProductos = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products)
+        }, 500)
+    })
+}
+
+export const traerProducto = (id) => {
+    return new Promise((resolve) => {
+        const prod = products.find(p => p.id === parseInt(id))
+        setTimeout(() => {
+            resolve(prod)
+        }, 2000)
+    })
+}
+*/
