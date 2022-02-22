@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemCount from './components/ItemCount/ItemCount';
 
 /*  BORRAR
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
     <NavBar title="Tienda Online" />
     <ItemListContainer title="Catalogo" />
+    <ItemDetailContainer title="Detalle" />
     </div>
     </>
   );

@@ -1,4 +1,4 @@
-const Item = ({ img, name, price }) => {
+const Item = ({ product, img, name, price }) => {
     return (
         <div
             style={{
@@ -8,7 +8,7 @@ const Item = ({ img, name, price }) => {
                 margin: '10px',
             }}
         >
-            <img src={img} width="400px" alt={name} />
+            <img src={img} width="300px" alt={name} />
             <h1>{name}</h1>
             <h2>$ {price}</h2>
         </div>
