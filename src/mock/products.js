@@ -34,6 +34,6 @@ export const traerProducto = (id) => {
         const prod = products.find(p => p.id === parseInt(id))
         setTimeout(() => {
             resolve(prod)
-        }, 1000)
+        }, 2000)
     })
 }
