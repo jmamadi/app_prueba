@@ -11,7 +11,7 @@ const ItemDetail = ({ product=[] }) => {
                 width: '300px',
             }}
         >
-            <img src={product.img} width="300px" />
+            <img src={product.img} width="300px" alt={product.name} />
             <h1>{product.name}</h1>
             <h2>$ {product.price}</h2>
             <p>{product.descripcion}</p>

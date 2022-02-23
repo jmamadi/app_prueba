@@ -16,7 +16,7 @@ function App() {
   return (
     <>
     <div className="App">
-    <NavBar title="Tienda Online" />
+    <NavBar title="Tienda Online de café" />
     <ItemListContainer title="Catalogo" />
     <ItemDetailContainer title="Detalle" />
     </div>
