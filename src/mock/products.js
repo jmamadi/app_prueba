@@ -30,10 +30,12 @@ export const traerProductos = () => {
 }
 
 export const traerProducto = (id) => {
+    console.log(id)
     return new Promise((resolve) => {
-        const prod = products.find(p => p.id === parseInt(id))
+       // const prod = products.find(p => p.id === parseInt(id))
         setTimeout(() => {
-            resolve(prod)
+           // resolve(prod)
+           resolve(products[0])
         }, 2000)
     })
 }

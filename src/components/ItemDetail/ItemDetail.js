@@ -1,16 +1,20 @@
 import Item from '../Item/Item';
 
-const ItemDetail = ({ products }) => {
+const ItemDetail = ({ product=[] }) => {
     return (
         <div
             style={{
                 display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
+                flexDirection: 'column',
+                border: '2px solid brown',
+                margin: '10px',
+                width: '300px',
             }}
         >
-            {products.map(product =><Item key={product.id} product={product}/>
-            )}
+            <img src={product.img} width="300px" />
+            <h1>{product.name}</h1>
+            <h2>$ {product.price}</h2>
+            <p>{product.descripcion}</p>
         </div>
     );
 };
