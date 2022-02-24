@@ -1,4 +1,7 @@
-const Item = ({ product, img, name, price }) => {
+import './Item.css'
+import { Link } from 'react-router-dom'
+
+const Item = ({product}) => {
     return (
         <div
             style={{
@@ -8,9 +11,14 @@ const Item = ({ product, img, name, price }) => {
                 margin: '10px',
             }}
         >
-            <img src={img} width="300px" alt={name} />
-            <h1>{name}</h1>
-            <h2>$ {price}</h2>
+            <h1 className="ItemHeader">{product.name}</h1>
+            <picture>
+            <img src={product.img} alt={product.name} className="ItemImg"/>
+            </picture>
+            <h2 className="Info">$ {product.price}</h2>
+            <footer className='ItemFooter'>
+                <Link className='myButton' to={`/detail/${product.id}`}>Ver detalle</Link>
+            </footer>
         </div>
     );
 };

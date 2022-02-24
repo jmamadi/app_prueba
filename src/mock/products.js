@@ -1,41 +1,50 @@
 export const products = [
-    { id: 1, name: 'Cafe Colombiano', stock: 15, price: 2000, img: './images/bandera_1.png', descripcion: 'Se caracteriza por tener mucho cuerpo, notas de dulce, nuez y chocolate, hasta florales y frutales, casi tropical', region: 'Antioquía', category: 'Cafe'},
-    { id: 2, name: 'Cafe Brasilero', stock: 20, price: 2500, img: './images/bandera_2.png', descripcion: 'Excelente café, de aroma suave, cuerpo ligero y sabor dulce', category: 'Cafe'},
-    { id: 3, name: 'Cafe Costaricence', stock: 15, price: 2700, img: './images/bandera_3.png', descripcion: 'De las variedades Caturra , que produce un grano de mayor calidad y con mejores características aromáticas', category: 'Cafe'},
-    { id: 4, name: 'Cafe Indú', stock: 8, price: 3000, img: './images/bandera_4.png', descripcion: 'Su taza es intensamente aromática, de sabor suave y con notas de chocolate', category: 'Cafe'},
-    { id: 5, name: 'Taza Personalizada', stock: 12, price: 2800, img: './images/tazapersonalizada_1.png', descripcion: 'Producto de porcelana, con una película templada totalmente personalizable', category: 'Tazas'},
-    { id: 6, name: 'Desayuno Premium', stock: 13, price: 3000, img: './images/desayuno.png', descripcion: 'En ese día tan especial, regalale la mejor sorpresa a es ser que tanto queres', category: 'Desayunos'},
+    { id: 1, name: 'Cafe Colombiano', price: 2000, category: 'Cafe', stock: 15, img: './images/bandera_1.png', description: 'Se caracteriza por tener mucho cuerpo, notas de dulce, nuez y chocolate, hasta florales y frutales, casi tropical'},
+    { id: 2, name: 'Cafe Brasilero', price: 2500, category: 'Cafe', stock: 20, img: './images/bandera_2.png', description: 'Excelente café, de aroma suave, cuerpo ligero y sabor dulce'},
+    { id: 3, name: 'Cafe Costaricence', price: 2700, category: 'Cafe', stock: 15, img: './images/bandera_3.png', description: 'De las variedades Caturra , que produce un grano de mayor calidad y con mejores características aromáticas'},
+    { id: 4, name: 'Cafe Indú', price: 3000, category: 'Cafe', stock: 8, img: './images/bandera_4.png', description: 'Su taza es intensamente aromática, de sabor suave y con notas de chocolate'},
+    { id: 5, name: 'Taza Personalizada', price: 2800, category: 'Tazas', stock: 12, img: './images/tazapersonalizada_1.png', description: 'Producto de porcelana, con una película templada totalmente personalizable'},
+    { id: 6, name: 'Desayuno Premium', price: 3000, category: 'Desayunos', stock: 13, img: './images/desayuno.png', description: 'En ese día tan especial, regalale la mejor sorpresa a es ser que tanto queres'},
 ];
 
+const categories = [
+    {id: 'cafe', description: 'Cafe'},
+    {id: 'tazas', description: 'Tazas'},
+    {id: 'desayunos', description: 'Desayunos'}
+]
 /*
-export const traerProductos = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(products);
-    }, 500);
-});
-
-export const traerProducto = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(products[0]);
-    }, 2000);
-});
+export const getProducts = (idCategory) => {
+    return new Promise ((resolve) => {
+        const productsToResolve = idCategory ? products.filter(item => item.category === idCategory) : products
+        setTimeout(() => {
+            resolve(productsToResolve);
+        },2000);
+    });
+}
 */
 
-export const traerProductos = () => {
+export const getProducts = (idCategory) => {
     return new Promise((resolve) => {
+        const productsToResolve = idCategory ? products.filter(item => item.category === idCategory) : products
         setTimeout(() => {
-            resolve(products)
-        }, 500)
+            resolve(productsToResolve);
+        }, 1000);
+    });
+}
+
+export const getProduct = (id) => {
+    return new Promise((resolve) => {
+        const prod = products.find(p => p.id === parseInt(id))
+        setTimeout(() => {
+            resolve(prod)
+        }, 1000)
     })
 }
 
-export const traerProducto = (id) => {
-    console.log(id)
+export const getCategories = () => {
     return new Promise((resolve) => {
-       // const prod = products.find(p => p.id === parseInt(id))
         setTimeout(() => {
-           // resolve(prod)
-           resolve(products[0])
-        }, 2000)
+            resolve(categories)
+        }, 1000)
     })
 }

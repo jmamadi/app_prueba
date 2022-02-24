@@ -9,9 +9,7 @@ const ItemList = ({ products }) => {
                 alignItems: 'center',
             }}
         >
-            {products.map((product) => (
-                <Item {...product} key={product.id} />
-            ))}
+            {products.map(product => <Item key={product.id} product={product}/>)}
         </div>
     );
 };

@@ -1,18 +1,13 @@
 import './NavBar.css'
+import {useState, useEffect} from 'react'
+import ItemDetail from '../ItemDetail/ItemDetail'
+import { getProduct } from '../../mock/products';
+import { useParams } from 'react-router-dom'
 import Button from '../Button/Button'
 import CartWidget from '../CartWidget/CartWidget'
 
-const NavBar = ({ title, ...rest }) => { //{ title: 'ecommerce ', color='red'}
-  // const { title, color } = props
-  const handleCafe = () => {
-    console.log('Cafe')
-  }
-  const handleTazas = () => {
-    console.log('Tazas')
-  }
-  const handleDesayunos = () => {
-    console.log('Desayunos')
-  }
+const ItemDetailContainer = () => {
+  const 
 //  const handleCarrito = () => {
 //    console.log('Carrito')
 //  }

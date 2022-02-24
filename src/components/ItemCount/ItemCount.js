@@ -17,8 +17,7 @@ const ItemCount = ({stock = 13, initial = 1, onAdd})=> {
 
    return(
        <div align="center">
-            <h2> Cafe Colombiano</h2>
-            <td align="center" style={{fontSize : '1rem'}}>{quantity}</td>
+            <td align="center" style={{fontSize : '1.5rem'}}>{quantity}</td>
                 <table >
                     <tbody>
                         <tr>
@@ -30,7 +29,6 @@ const ItemCount = ({stock = 13, initial = 1, onAdd})=> {
                 </table>
        </div>
    )
-
 }
 
 export default ItemCount
