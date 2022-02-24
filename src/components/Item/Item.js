@@ -17,7 +17,7 @@ const Item = ({product}) => {
             </picture>
             <h2 className="Info">$ {product.price}</h2>
             <footer className='ItemFooter'>
-                <Link className='myButton' to={`/detail/${product.id}`}>Ver detalle</Link>
+                <Link to={`/detail/${product.id}`}>Ver detalle</Link>
             </footer>
         </div>
     );

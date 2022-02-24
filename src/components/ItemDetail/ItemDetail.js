@@ -13,12 +13,14 @@ const ItemDetail = ({ product }) => {
                 width: '500px',
             }}
         >
-            <h1>{product?.name}</h1>
-            <picture> <img src={product?.img} alt={product?.name} className="ItemImg"  /> </picture>
-            <p>Categoría: {product?.category}</p>
-            <h2>$ {product?.price}</h2>
-            <p>{product?.description}</p>
+            <h1>{product.name}</h1>
+            <picture> <img src={product.img} alt={product.name} className="ItemImg"  /> </picture>
+            <p>Categoría: {product.category}</p>
+            <h2>$ {product.price}</h2>
+            <p>{product.description}</p>
+            <footer>
             <ItemCount stock={product.stock} />
+            </footer>
         </div>
     );
 };

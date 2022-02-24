@@ -1,27 +1,31 @@
 import './NavBar.css'
-import {useState, useEffect} from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import { getProduct } from '../../mock/products';
-import { useParams } from 'react-router-dom'
-import Button from '../Button/Button'
 import CartWidget from '../CartWidget/CartWidget'
+import { NavLink } from 'react-router-dom'
+import {useEffect, useState } from 'react'
+import { getCategories } from '../../mock/products';
 
-const ItemDetailContainer = () => {
-  const 
-//  const handleCarrito = () => {
-//    console.log('Carrito')
-//  }
+// import ItemDetail from '../ItemDetail/ItemDetail'
+// import { useParams } from 'react-router-dom'
+// import Button from '../Button/Button'
 
-  return (
+const NavBar = () => { //{ title: 'ecommerce ', color='red'}
+  const [categories, setCategories] = useState([])
+  useEffect(() => {
+    getCategories().then(categories => {
+      setCategories(categories)
+    })
+  }, [])
+
+return (
       <nav className="NavBar">
         <div>
             <img src={'./images/logo.png'} alt='logo'/>
         </div>
-        <h3>{title}</h3>
+        <h3>Tienda Online de Cafe</h3>
         <div className="Categories">
-          <Button handleClick={handleCafe}>Cafe</Button>
-          <Button handleClick={handleTazas}>Tazas</Button>
-          <Button handleClick={handleDesayunos}>Desayunos</Button>
+          {categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className={({ isActive }) =>
+              isActive ? 'ActiveOption' : 'Option'
+            }>{cat.description}</NavLink>)}
         </div>
         <div>
           <CartWidget />
