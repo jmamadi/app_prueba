@@ -5,8 +5,9 @@ const ItemList = ({ products }) => {
         <div
             style={{
                 display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
+                flexDirection: 'row',
+                margin: '10px',
+
             }}
         >
             {products.map(product => <Item key={product.id} product={product}/>)}

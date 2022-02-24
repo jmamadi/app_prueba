@@ -8,9 +8,9 @@ const ItemDetail = ({ product }) => {
             style={{
                 display: 'flex',
                 flexDirection: 'column',
-                border: '2px solid brown',
+                border: '',
                 margin: '10px',
-                width: '500px',
+                width: '800px',
             }}
         >
             <h1>{product.name}</h1>

@@ -19,7 +19,7 @@ const NavBar = () => { //{ title: 'ecommerce ', color='red'}
 return (
       <nav className="NavBar">
         <div>
-            <img src={'./images/logo.png'} alt='logo'/>
+            <img src={'./../images/logo.png'} alt='logo'/>
         </div>
         <h3>Tienda Online de Cafe</h3>
         <div className="Categories">
