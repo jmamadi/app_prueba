@@ -1,6 +1,6 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import {useEffect, useState } from 'react'
 import { getCategories } from '../../mock/products';
 
@@ -19,7 +19,7 @@ const NavBar = () => { //{ title: 'ecommerce ', color='red'}
 return (
       <nav className="NavBar">
         <div>
-            <img src={'./../images/logo.png'} alt='logo'/>
+            <Link to={``}><img src={'./../images/logo.png'} alt='logo'/></Link>
         </div>
         <h3>Tienda Online de Cafe</h3>
         <div className="Categories">
