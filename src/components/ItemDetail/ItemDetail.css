@@ -37,7 +37,7 @@
     order: 1;
     align-self: center;
     flex-grow: 0;
-    justify-content: center;
+    justify-conte0nt: center;
     align-items: center;
     text-decoration: none;
     color: #FFFFFF;
@@ -48,8 +48,6 @@
 }
 
 .ItemImg {
-    width: 100px;
-    height: 100px;
     object-fit: cover;
     object-position: center;
 }
