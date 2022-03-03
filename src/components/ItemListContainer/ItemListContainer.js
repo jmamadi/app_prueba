@@ -29,7 +29,7 @@ const ItemListContainer = () => {
     return (
         <div>
             {
-                loading ? <h1>Cargando...</h1> : <ItemList products={products}/>
+                loading ? <h1>Cargando...</h1> : products.length ? <ItemList products={products}/> : <h1>No se encontraron productos!</h1>
             }
         </div>
     );

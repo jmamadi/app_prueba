@@ -1,4 +1,4 @@
-function ItemCart () {
+const ItemCart = () => {
     return(
         <h1>Carrito</h1>
     )

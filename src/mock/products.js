@@ -1,4 +1,4 @@
-// export 
+
 const products = [
     { id: 1, name: 'Cafe Colombiano', price: 2000, category: 'cafe', stock: 15, img: './../images/bandera_1.png', description: 'Se caracteriza por tener mucho cuerpo, notas de dulce, nuez y chocolate, hasta florales y frutales, casi tropical'},
     { id: 2, name: 'Cafe Brasilero', price: 2500, category: 'cafe', stock: 20, img: './../images/bandera_2.png', description: 'Excelente café, de aroma suave, cuerpo ligero y sabor dulce'},
@@ -13,16 +13,7 @@ const categories = [
     {id: 'tazas', description: 'Tazas'},
     {id: 'desayunos', description: 'Desayunos'}
 ]
-/*
-export const getProducts = (idCategory) => {
-    return new Promise ((resolve) => {
-        const productsToResolve = idCategory ? products.filter(item => item.category === idCategory) : products
-        setTimeout(() => {
-            resolve(productsToResolve);
-        },2000);
-    });
-}
-*/
+
 
 export const getProducts = (categoryId) => {
     return new Promise((resolve) => {

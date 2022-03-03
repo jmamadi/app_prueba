@@ -1,9 +1,12 @@
-import '../Button/Button.css'
+import './CartWidget.css'
 
-const CartWidget = ({ backgroundColor = '#C4C4C4', colorText= '#000000', handleClick, children= "0", ...rest}) => {
-    return (
-        <button className="myButton" style={{ backgroundColor, color: colorText }} onClick={handleClick}>🛒{children}</button>
-    )
+const CartWidget = () => {
+    return(
+        <button className="CartWidget">
+            <img src="/images/cart.svg" alt='cart' className='CartImg'/>
+            0
+        </button>
+    );
 }
 
 export default CartWidget
