@@ -19,7 +19,7 @@ const NavBar = () => { //{ title: 'ecommerce ', color='red'}
 return (
       <nav className="NavBar">
         <div>
-            <Link to={``}><img src={'./../images/logo.png'} alt='logo'/></Link>
+            <Link to={`/`}><img src={'./../images/logo.png'} alt='logo'/></Link>
         </div>
         <h3>Tienda Online de Cafe</h3>
         <div className="Categories">

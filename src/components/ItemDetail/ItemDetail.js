@@ -33,7 +33,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
             <h2>$ {price}</h2>
             <p>{description}</p>
             <footer>
-            { quantity > 0 ? <Link to={'/carrito/'} className='Option'>Ir al carrito de compras</Link> : <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} /> }
+            { quantity > 0 ? <Link to={'/cart/'} className='Option'>Ir al carrito de compras</Link> : <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} /> }
             </footer>
         </div>
     );
