@@ -1,8 +1,9 @@
-import Item from '../Item/Item';
+import React from 'react'
+import Item from '../Item/Item'
 
-const ItemList = ({ products = []}) => {
+const ItemList = ({ products }) => {     /* = []*/
     return (
-        <div
+        <ul
             style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -11,8 +12,8 @@ const ItemList = ({ products = []}) => {
             }}
         >
             {products.map(product => <Item key={product.id} product={product}/>)}
-        </div>
+        </ul>
     );
 };
 
-export default ItemList;
+export default React.memo(ItemList)
