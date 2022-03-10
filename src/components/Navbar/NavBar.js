@@ -1,19 +1,27 @@
 import './NavBar.css'
-import CartWidget from '../CartWidget/CartWidget'
+import { useEffect, useState, useContext} from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import {useEffect, useState } from 'react'
-import { getCategories } from '../../mock/products';
+import { getDocs, collection } from 'firebase/firestore'
+import { firestoreDb } from '../../services/firebase/firebase'
+import CartWidget from '../CartWidget/CartWidget'
+import CartContext from '../../context/CartContext'
 
 // import ItemDetail from '../ItemDetail/ItemDetail'
 // import { useParams } from 'react-router-dom'
 // import Button from '../Button/Button'
 
-const NavBar = () => { //{ title: 'ecommerce ', color='red'}
+const NavBar = () => {
   const [categories, setCategories] = useState([])
+
+  const { products } = useContext(CartContext)
+
   useEffect(() => {
-    getCategories().then(categories => {
-      setCategories(categories)
-    })
+      getDocs(collection(firestoreDb, 'categories')).then(response => {
+        const categories = response.docs.map(cat => {
+          return { id: cat.id, ...cat.data()}
+        })
+        setCategories(categories)
+      })
   }, [])
 
 return (
@@ -28,7 +36,7 @@ return (
             }>{cat.description}</NavLink>)}
         </div>
         <div>
-          <CartWidget />
+          {products.length > 0 && <CartWidget />}
         </div>
       </nav>
   )

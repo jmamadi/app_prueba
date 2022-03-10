@@ -1,20 +1,28 @@
 import { useState, useEffect } from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import { getProduct } from '../../mock/products'
 import { useParams } from 'react-router-dom'
+import { firestoreDb } from '../../services/firebase/firebase'
+import { getDoc, doc } from 'firebase/firestore'
+import ItemDetail from '../ItemDetail/ItemDetail'
+import { useNotificationServices } from '../../services/notification/NotificationServices'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true)
 
     const { productId } = useParams()
-
+    
+    const setNotification = useNotificationServices()
 
     useEffect(() => {
-        getProduct(productId).then(item => {
-            setProduct(item)
-        }).catch(err  => {
-            console.log(err)
+        setLoading(true)
+
+        const docRef = doc(firestoreDb, 'products', productId)
+
+        getDoc(docRef).then(response => {
+            const product = { id: response.id, ...response.data()}
+            setProduct(product)
+        }).catch((error) => {
+            setNotification('error',`Error buscando producto: ${error}`)
         }).finally(() => {
             setLoading(false)
         })
@@ -23,7 +31,7 @@ const ItemDetailContainer = () => {
             setProduct()
         })
 
-    }, [productId])
+    }, [productId]) // eslint-disable-line
 
 
     return (
