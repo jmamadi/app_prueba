@@ -8,7 +8,7 @@ import { useNotificationServices } from '../../services/notification/Notificatio
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const [quantity, setQuantity] = useState(0)
 
-    const { AddItem } = useContext(CartContext)
+    const { addItem } = useContext(CartContext)
 
     const setNotification = useNotificationServices()
 
@@ -25,7 +25,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
             stock
         }
 
-        AddItem(productToAdd, quantity)
+        addItem(productToAdd, quantity)
         setNotification('success',`Has agregado ${name} al carrito`)
     }
 

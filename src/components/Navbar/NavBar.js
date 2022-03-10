@@ -6,10 +6,6 @@ import { firestoreDb } from '../../services/firebase/firebase'
 import CartWidget from '../CartWidget/CartWidget'
 import CartContext from '../../context/CartContext'
 
-// import ItemDetail from '../ItemDetail/ItemDetail'
-// import { useParams } from 'react-router-dom'
-// import Button from '../Button/Button'
-
 const NavBar = () => {
   const [categories, setCategories] = useState([])
 
