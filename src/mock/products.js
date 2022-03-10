@@ -14,6 +14,7 @@ const categories = [
     {id: 'desayunos', description: 'Desayunos'}
 ]
 
+const papar = []
 
 export const getProducts = (categoryId) => {
     return new Promise((resolve) => {
