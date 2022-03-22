@@ -1,3 +1,4 @@
+/*
 import './Button.css'
 
 const Button = ({ backgroundColor = '#C4C4C4', colorText= '#000000', handleClick, children, ...rest}) => {
@@ -7,3 +8,4 @@ const Button = ({ backgroundColor = '#C4C4C4', colorText= '#000000', handleClick
 }
 
 export default Button
+*/

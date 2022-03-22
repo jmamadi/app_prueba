@@ -1,4 +1,4 @@
-import './Catalogo.css'
+/*import './Catalogo.css'
 
 const Catalogo = ({ title, backgroundColor = '#F2D1C9', colorText= '#000000', handleClick, children= "Hola mundo!", ...rest}) => {
     return (
@@ -7,3 +7,4 @@ const Catalogo = ({ title, backgroundColor = '#F2D1C9', colorText= '#000000', ha
 }
 
 export default Catalogo
+*/

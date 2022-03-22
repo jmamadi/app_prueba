@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+/* import { useState, useEffect } from 'react'
 
 const FunctionCounter = (props) => {
     const [count, setCount] = useState(0) // = [state, setState]
@@ -46,3 +46,5 @@ const FunctionCounter = (props) => {
 }
 
 export default FunctionCounter
+
+*/

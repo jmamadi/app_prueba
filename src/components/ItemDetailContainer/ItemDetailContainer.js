@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { firestoreDb } from '../../services/firebase/firebase'
-import { getDoc, doc } from 'firebase/firestore'
+import { getProductById } from '../../services/firebase/firebase'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useNotificationServices } from '../../services/notification/NotificationServices'
 
@@ -10,17 +9,14 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const { productId } = useParams()
-
+    
     const setNotification = useNotificationServices()
 
     useEffect(() => {
         setLoading(true)
 
-        const docRef = doc(firestoreDb, 'products', productId)
-
-        getDoc(docRef).then(response => {
-            const product = { id: response.id, ...response.data()}
-            setProduct(product)
+        getProductById(productId).then(response => {
+            setProduct(response)
         }).catch((error) => {
             setNotification('error',`Error buscando producto: ${error}`)
         }).finally(() => {

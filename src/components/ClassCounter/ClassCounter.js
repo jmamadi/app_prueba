@@ -1,3 +1,4 @@
+/* 
 import { Component } from "react";
 
 class ClassCounter extends Component {
@@ -31,3 +32,4 @@ class ClassCounter extends Component {
 }
 
 export default ClassCounter
+*/

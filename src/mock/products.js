@@ -1,5 +1,5 @@
 
-const products = [
+/*const products = [
     { id: 1, name: 'Cafe Colombiano', price: 2000, category: 'cafe', stock: 15, img: './../images/bandera_1.png', description: 'Se caracteriza por tener mucho cuerpo, notas de dulce, nuez y chocolate, hasta florales y frutales, casi tropical'},
     { id: 2, name: 'Cafe Brasilero', price: 2500, category: 'cafe', stock: 20, img: './../images/bandera_2.png', description: 'Excelente café, de aroma suave, cuerpo ligero y sabor dulce'},
     { id: 3, name: 'Cafe Costaricence', price: 2700, category: 'cafe', stock: 15, img: './../images/bandera_3.png', description: 'De las variedades Caturra , que produce un grano de mayor calidad y con mejores características aromáticas'},
@@ -43,3 +43,4 @@ export const getCategories = () => {
     })
 }
 
+*/
