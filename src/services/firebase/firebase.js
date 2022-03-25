@@ -5,7 +5,7 @@ import { getDocs, collection, query, where, getDoc, doc } from 'firebase/firesto
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_apiKey,
   authDomain: process.env.REACT_APP_authDomain,
-  projectId: "camada-24925-4208f",
+  projectId: process.env.REACT_APP_projectId,
   storageBucket: process.env.REACT_APP_storageBucket,
   messagingSenderId: process.env.REACT_APP_messagingSenderId,
   appId: process.env.REACT_APP_appId

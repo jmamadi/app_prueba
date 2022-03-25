@@ -8,7 +8,7 @@ const Togglable = forwardRef((props, ref) => {
 
     const toggleVisibility = () => {
       setVisible(!visible)
-    } 
+    }
 
     useImperativeHandle(ref, () => {
       return {
@@ -26,7 +26,7 @@ const Togglable = forwardRef((props, ref) => {
           {props.children}
         </div>
       </div>
-    ) 
+    )
 })
 
 export default Togglable

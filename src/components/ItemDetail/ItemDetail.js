@@ -40,7 +40,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
             {
                 quantity > 0 ?
                     <Link to={'/cart'} className='Option'>Ir al carrito de compras</Link> :
-                    <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                    (stock>0) ? <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} /> : <div>No se encontraron productos disponibles</div>
             }
             </footer>
         </div>

@@ -7,6 +7,7 @@ import CartItem from '../CartItem/CartItem'
 import { writeBatch, getDocs, collection, addDoc, Timestamp, where, query, documentId } from 'firebase/firestore'
 import { firestoreDb } from '../../services/firebase/firebase'
 import { useNotificationServices } from '../../services/notification/NotificationServices'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
     const [processingOrder, setProcessingOrder] = useState(false)
@@ -48,7 +49,7 @@ const Cart = () => {
                     })
                 }).then(() => {
                     if(outOfStock.length === 0) {
-                        addDoc(collection(firestoreDb, 'orders'), objOrder).then(({id}) => { 
+                        addDoc(collection(firestoreDb, 'orders'), objOrder).then(({id}) => {
                             batch.commit()
                             clearCart()
                             setNotification('success', `La orden se genero exitosamente, su numero de orden es: ${id}`)
@@ -57,8 +58,8 @@ const Cart = () => {
                         outOfStock.forEach(prod => {
                             setNotification('error', `El producto ${prod.name} no tiene stock disponible`)
                             removeItem(prod.id)
-                        })    
-                    }               
+                        })
+                    }
                 }).catch((error) => {
                     setNotification('error', error)
                 }).finally(() => {
@@ -78,7 +79,7 @@ const Cart = () => {
         return (
             <div>
                 <h1>Cart</h1>
-                <h2>No hay productos en el carrito</h2>
+                <h2>No hay productos en el carrito, <Link to={`/`}>volver a menu principal</Link></h2>
             </div>
         )
     }

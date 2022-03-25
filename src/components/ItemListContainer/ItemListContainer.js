@@ -10,7 +10,7 @@ const ItemListContainer = () => {
     const { categoryId } = useParams()
 
     const setNotification = useNotificationServices()
-     
+
     useEffect(() => {
         setLoading(true)
 
@@ -24,7 +24,7 @@ const ItemListContainer = () => {
 
         return (() => {
             setProducts()
-        })          
+        })
     }, [categoryId]) // eslint-disable-line
     
     return (

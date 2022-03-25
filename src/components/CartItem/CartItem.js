@@ -25,7 +25,7 @@ const CartItem = ({ id, name, quantity, price, img }) => {
                 <p className="InfoCartItem">
                     Precio x Unidad: ${price}
                 </p>
-            </section>           
+            </section>
             <footer className='ItemFooterCartItem'>
                  <p className="InfoCartItem">
                      Subtotal: ${price * quantity}

@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const { productId } = useParams()
-    
+
     const setNotification = useNotificationServices()
 
     useEffect(() => {
