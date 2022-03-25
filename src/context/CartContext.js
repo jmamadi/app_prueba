@@ -79,8 +79,3 @@ export const CartContextProvider = ({ children }) => {
 }
 
 export default Context
-
-
-/*
-prueba navbar
-*/
