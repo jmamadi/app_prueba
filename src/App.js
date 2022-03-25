@@ -10,7 +10,7 @@ import { NotificationServicesProvider } from './services/notification/Notificati
 const App = () => {
 
   return (
-    <body>
+
     <div className="App">
       <NotificationServicesProvider>
         <CartContextProvider>
@@ -27,7 +27,6 @@ const App = () => {
         </CartContextProvider>
       </NotificationServicesProvider>
     </div>
-    </body>
   );
 }
 
