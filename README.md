@@ -61,7 +61,7 @@ Las rutas de la aplicación son las siguientes:
 ✓ / - Directorio raíz, el cual es utilizado tanto en el logo de la empresa como en la finalización de la compra  
 ✓ /category/:categoryId - Filtra por los productos que son de la categoría seleccionada  
 ✓ /detail/:productId - Filtra el producto a través de su id único  
-✓ /cart/ - visualiza el carrito con los productos seleccionados (si no hay productos seleccionados, no estára la posibilidad de acceder a dicha ruta)  
+✓ /cart/ - visualiza el carrito con los productos seleccionados (si no hay productos seleccionados, no estára la posibilidad de     acceder a dicha ruta)  
 
 ### Sitio en funcionamiento
 
