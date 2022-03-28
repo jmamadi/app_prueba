@@ -7,11 +7,11 @@
     - Linkedin: https://www.linkedin.com/in/jamadi/;
     - GitHub: https://github.com/jmamadi;
 
-## `Información del proyecto:`
+## Información del proyecto:
 
 Proyecto orientado al ecommerce en la industria del café y productos complementarios a la misma. El proyecto fue desarrollado principalmente utilizando React Js. En esta app se podrán realizar selecciones de compras en un muestreo general como así también específico (sección café, desayunos y tazas). Una vez finalizada la pre selección de productos se podrá proceder a la compra habiendo completado previamente los campos obligatorios de contacto para generar una orden de compras para el seguimiento del usuario.
 
-## `Herramientas utilizadas para el desarrollo del producto:`
+## Herramientas utilizadas para el desarrollo del producto:
 
 ✓ Create React App
 ✓ Css
@@ -22,45 +22,46 @@ Proyecto orientado al ecommerce en la industria del café y productos complement
 ✓ React-Router
 ✓ Visual Studio Code
 
-## `Detalle del desarrollo:`
+## Detalle del desarrollo:
 
-### `Variables de entorno que deben configurarse:`
+### Variables de entorno que deben configurarse:
 
-- REACT_APP_ApiKey
-- REACT_APP_AuthDomain
-- REACT_APP_projectId
-- REACT_APP_StorageBucket
-- REACT_APP_MessagingSenderId
-- REACT_APP_AppId
+✓ REACT_APP_ApiKey
+✓ REACT_APP_AuthDomain
+✓ REACT_APP_projectId
+✓ REACT_APP_StorageBucket
+✓ REACT_APP_MessagingSenderId
+✓ REACT_APP_AppId
 
-### Tablas de Firebase
+### Tablas de Firebase:
+Las mismas son un total de tres elementos. Dos de ellas son generadas de manera manual por la empresa y una tercera de manera automática a medida en que los usuarios van generando ordenes de compra. Esta tercera se nutre no solo del formulario de contacto sino también por la tabla de productos que se encuentra linkeado por el stock de los mismos. A continuación se detallan las mismas:
 
-Se deben crear dos tablas de Firebase. Una de ellas para las categorías y otras para los productos. Las tablas deben tener la siguiente estructura:
+#### Products
+✓ id vía generación automática de Firebase
+✓ category: Seccionado en tres (cafe, desayunos y tazas).
+✓ description: Orientado principalmente a describir las particularidades de cada café, pero también se le da un descriptivo del tipo de producto que lleva en los demás elementos.
+✓ img: Aquí se detalla el origen del producto para los cafés a través de su nacionalidad y para el resto, un detalle del producto que se lleva.
+✓ name: nombre del producto.
+✓ price: precio del producto en moneda local (ARS $).
+✓ stock: cantidad disponible de la unidad visualizada.
 
-##### Colección: categorías
-- ID
-- Nombre: nombre del producto
+#### Categories:
+✓ id vía generación automática de Firebase
+✓ description: distingue la categoría a la cual pertenece la sección
 
-##### Colección: productos
-- ID (se recomienda de generación automática)
-- Categoria: categoría del producto. Ejemplo: vodka, licor, etc.
-- Contenido: tamaño de la botella, en ml. Por ejemplo: 750, 1000.
-- Marca: marca de la bebida.
-- Nombre: nombre del producto.
-- Precio: precio del producto en pesos argentinos. Por ejemplo: 500, 1000.
-- Stock: stock disponible
-- img: imagen del producto, en la carpeta img, sin la extensión.
-
-Adicionalmente, al finalizar la compra se crea la colección "ordenes". Esta tabla se crea de manera automática e incluye la información del comprador (nombre, teléfono, dirección, comentarios), los datos correspondientes a cada uno de los productos adquiridos, el precio total y la fecha.
+#### Orders:
+✓ id vía generación automática a través de la compra realizada por el usuario, identificación que le será detallada al cliente para hacer seguimiento de su compra.
+✓ buyer: Detalle característico que se solicita en compras online con toda la información necesaria para contactar al cliente para la posterior entrega del producto (domicilio, teléfono de contacto, email, comentarios y fecha de realización para organizar prioridades en las entregas)
+✓ items: detalle del producto seleccionado, stock y precio total de la compra.
 
 ### Rutas de la aplicación
 
 Las rutas de la aplicación son las siguientes:
 
-- / => directorio raíz
-- /category/:categoryName => Filtra por los productos que son de categoría categoryName
-- /detail/:productID => Filtra el producto cuyo ID es productID
-- /carrito/ => visualiza el carrito
+✓ / - Directorio raíz, el cual es utilizado tanto en el logo de la empresa como en la finalización de la compra
+✓ /category/:categoryId - Filtra por los productos que son de la categoría seleccionada
+✓ /detail/:productId - Filtra el producto a través de su id único
+✓ /cart/ - visualiza el carrito con los productos seleccionados (si no hay productos seleccionados, no estára la posibilidad de acceder a dicha ruta)
 
 ### Sitio en funcionamiento
 
