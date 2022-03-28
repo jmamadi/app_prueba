@@ -1,6 +1,6 @@
 # Curso de Reacct JS - CoderHouse
 
-q## `Desarrollado por: Juan Martín Amadi Dattero`
+## Desarrollado por: Juan Martín Amadi Dattero
 
 ✓ Contacto:
     - Email: jjmamadi@gmail.com;
@@ -22,7 +22,7 @@ Proyecto orientado al ecommerce en la industria del café y productos complement
 ✓ React-Router
 ✓ Visual Studio Code
 
-## `Detalle del desarrollo:### Variables de entorno:`
+## `Detalle del desarrollo:`
 
 ### `Variables de entorno que deben configurarse:`
 
