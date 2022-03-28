@@ -3,9 +3,9 @@
 ## Desarrollado por: Juan Martín Amadi Dattero
 
 ✓ Contacto:
-    - Email: jjmamadi@gmail.com;
-    - Linkedin: https://www.linkedin.com/in/jamadi/;
-    - GitHub: https://github.com/jmamadi;
+    - Email: jjmamadi@gmail.com  
+    - Linkedin: https://www.linkedin.com/in/jamadi/  
+    - GitHub: https://github.com/jmamadi  
 
 ## Información del proyecto:
 
@@ -13,55 +13,55 @@ Proyecto orientado al ecommerce en la industria del café y productos complement
 
 ## Herramientas utilizadas para el desarrollo del producto:
 
-✓ Create React App
-✓ Css
-✓ Firebase
-✓ Figma
-✓ Java Script
-✓ React Js
-✓ React-Router
-✓ Visual Studio Code
+✓ Create React App  
+✓ Css  
+✓ Firebase  
+✓ Figma  
+✓ Java Script  
+✓ React Js  
+✓ React-Router  
+✓ Visual Studio Code  
 
 ## Detalle del desarrollo:
 
 ### Variables de entorno que deben configurarse:
 
-✓ REACT_APP_ApiKey
-✓ REACT_APP_AuthDomain
-✓ REACT_APP_projectId
-✓ REACT_APP_StorageBucket
-✓ REACT_APP_MessagingSenderId
-✓ REACT_APP_AppId
+✓ REACT_APP_ApiKey;
+✓ REACT_APP_AuthDomain;
+✓ REACT_APP_projectId;
+✓ REACT_APP_StorageBucket;
+✓ REACT_APP_MessagingSenderId;
+✓ REACT_APP_AppId;
 
 ### Tablas de Firebase:
 Las mismas son un total de tres elementos. Dos de ellas son generadas de manera manual por la empresa y una tercera de manera automática a medida en que los usuarios van generando ordenes de compra. Esta tercera se nutre no solo del formulario de contacto sino también por la tabla de productos que se encuentra linkeado por el stock de los mismos. A continuación se detallan las mismas:
 
 #### (#Products:)
-✓ id vía generación automática de Firebase
-✓ category: Seccionado en tres (cafe, desayunos y tazas).
-✓ description: Orientado principalmente a describir las particularidades de cada café, pero también se le da un descriptivo del tipo de producto que lleva en los demás elementos.
-✓ img: Aquí se detalla el origen del producto para los cafés a través de su nacionalidad y para el resto, un detalle del producto que se lleva.
-✓ name: nombre del producto.
-✓ price: precio del producto en moneda local (ARS $).
-✓ stock: cantidad disponible de la unidad visualizada.
+✓ id vía generación automática de Firebase;
+✓ category: Seccionado en tres (cafe, desayunos y tazas);
+✓ description: Orientado principalmente a describir las particularidades de cada café, pero también se le da un descriptivo del tipo de producto que lleva en los demás elementos;
+✓ img: Aquí se detalla el origen del producto para los cafés a través de su nacionalidad y para el resto, un detalle del producto que se lleva;
+✓ name: nombre del producto;
+✓ price: precio del producto en moneda local (ARS $);
+✓ stock: cantidad disponible de la unidad visualizada;
 
 #### (#Categories:)
-✓ id vía generación automática de Firebase
-✓ description: distingue la categoría a la cual pertenece la sección
+✓ id vía generación automática de Firebase;
+✓ description: distingue la categoría a la cual pertenece la sección;
 
 #### (#Orders:)
-✓ id vía generación automática a través de la compra realizada por el usuario, identificación que le será detallada al cliente para hacer seguimiento de su compra.
-✓ buyer: Detalle característico que se solicita en compras online con toda la información necesaria para contactar al cliente para la posterior entrega del producto (domicilio, teléfono de contacto, email, comentarios y fecha de realización para organizar prioridades en las entregas)
-✓ items: detalle del producto seleccionado, stock y precio total de la compra.
+✓ id vía generación automática a través de la compra realizada por el usuario, identificación que le será detallada al cliente para hacer seguimiento de su compra;
+✓ buyer: Detalle característico que se solicita en compras online con toda la información necesaria para contactar al cliente para la posterior entrega del producto (domicilio, teléfono de contacto, email, comentarios y fecha de realización para organizar prioridades en las entregas);
+✓ items: detalle del producto seleccionado, stock y precio total de la compra;
 
 ### Rutas de la aplicación
 
 Las rutas de la aplicación son las siguientes:
 
-✓ / - Directorio raíz, el cual es utilizado tanto en el logo de la empresa como en la finalización de la compra
-✓ /category/:categoryId - Filtra por los productos que son de la categoría seleccionada
-✓ /detail/:productId - Filtra el producto a través de su id único
-✓ /cart/ - visualiza el carrito con los productos seleccionados (si no hay productos seleccionados, no estára la posibilidad de acceder a dicha ruta)
+✓ / - Directorio raíz, el cual es utilizado tanto en el logo de la empresa como en la finalización de la compra;
+✓ /category/:categoryId - Filtra por los productos que son de la categoría seleccionada;
+✓ /detail/:productId - Filtra el producto a través de su id único;
+✓ /cart/ - visualiza el carrito con los productos seleccionados (si no hay productos seleccionados, no estára la posibilidad de acceder a dicha ruta);
 
 ### Sitio en funcionamiento
 
