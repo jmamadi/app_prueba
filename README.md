@@ -65,4 +65,4 @@ Las rutas de la aplicación son las siguientes:
 
 ### Funcionamiento del sitio
 
-![Proceso de compra](https://agiongrande.github.io/deautor-react/deautor/public/proceso.gif)
+![Test de funcionamiento](https://github.com/jmamadi/app_prueba/tree/FinalVersion/public/doncafeteroTest.gif)
