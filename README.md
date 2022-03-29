@@ -65,4 +65,6 @@ Las rutas de la aplicación son las siguientes:
 
 ### Funcionamiento del sitio
 
+En este apartado se verá como se desarrolla el proceso de compra desde que se eligen el producto, la selección de las unidades y el intento de adquirir productos que no hay en stock, donde aparecerá una leyenda indicando que no hay stock del producto buscado.
+
 ![Test de funcionamiento](https://github.com/jmamadi/app_prueba/tree/FinalVersion/public/doncafeteroTest.gif)
