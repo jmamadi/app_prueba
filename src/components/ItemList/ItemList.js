@@ -3,7 +3,7 @@ import Item from '../Item/Item'
 
 const ItemList = ({ products }) => {
     return (
-        <ul
+        <div
             style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -12,7 +12,7 @@ const ItemList = ({ products }) => {
             }}
         >
             {products.map(product => <Item key={product.id} product={product}/>)}
-        </ul>
+        </div>
     );
 };
 

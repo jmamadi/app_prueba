@@ -39,8 +39,8 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
             <footer>
             {
                 quantity > 0 ?
-                    <Link to={'/cart'} className='Option'>Ir al carrito de compras</Link> :
-                    (stock>0) ? <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} /> : <div>No se encontraron productos disponibles</div>
+                    <Link to={'/cart'} className='fila bordeTablaProductos btnProducto'>Ir al carrito de compras</Link> :
+                    (stock>0) ? <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} /> : <button className='fila bordeTablaProductos btnProducto'>No se encontraron productos disponibles</button>
             }
             </footer>
         </div>

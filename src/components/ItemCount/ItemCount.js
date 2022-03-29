@@ -23,9 +23,9 @@ const ItemCount = ({stock = 1, initial = 1, onAdd})=> {
                     <p className='Info'>Cantidad {quantity}</p>
                 </div>
                 <div className='fila'>
-                    <div className="fila bordeTablaProductos btnProducto" onClick={()=> decrement() }>-</div>
-                    <div className="fila bordeTablaProductos btnProducto" onClick={() => onAdd(quantity)}>Agregar al carrito</div>
-                    <div className="fila bordeTablaProductos btnProducto" onClick={() => increment() }>+</div>
+                    <button className="fila bordeTablaProductos btnProducto" onClick={()=> decrement() }>-</button>
+                    <button className="fila bordeTablaProductos btnProducto" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
+                    <button className="fila bordeTablaProductos btnProducto" onClick={() => increment() }>+</button>
                 </div>
             </div>
         </div>

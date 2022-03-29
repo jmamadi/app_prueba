@@ -1,33 +1,48 @@
-.CardCartItem {
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    padding: 20px;
-    margin: 30px;
-    font-size: 10px;
-    background-color: papayawhip;
-    border: 1px solid #e1e1e1;
-    border-radius: 10px;
+h1{
+    text-decoration: underline;
 }
 
-.InfoCartItem {
-    margin-right: 50px;
+.baseCentral{
+    display: flex;
+    justify-content: space-around;
+
 }
+
+.CardCartItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    margin: 30px;
+    font-size: 15px;
+    border: 1px solid #BF8F73;
+    border-radius: 10px;
+    color: #BF8F73;
+}
+
 
 .ContainerItemCartItem {
     display: flex;
     justify-content: space-between;
+    width: 40%;
 }
 
 .ItemHeaderCartItem {
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    color: #BF8F73;
 }
 
 .InfoCartItem {
-    font-size: 12px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    color: #BF8F73;
+    font-size: 15px;
 }
 
 .ButtonCartItem {
@@ -56,7 +71,50 @@
 }
 
 .ItemImg {
-    width: auto;
+    width: 120px;
     object-fit: cover;
     object-position: center;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2D1C9;
+    text-decoration: none;
+}
+
+.bordeTablaProductos {
+    border-width: 2px;
+    border-color: #BF8F73;
+    border-style: solid;
+    padding: 0.1rem;
+    margin: 0.1rem;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btnProducto {
+    text-decoration: none;
+    color: grey;
+
+    flex: none;
+    display: inline-block;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnProducto:hover {
+    background-color: #BF8F99;
+    text-decoration: none;
+    color: black;
+}
+
+.btnProductoRemover {
+    background-color: #BF8F99;
+    color: black;
 }

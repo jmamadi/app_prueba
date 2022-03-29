@@ -11,6 +11,7 @@ const CartItem = ({ id, name, quantity, price, img }) => {
     }
 
     return (
+        <div className='baseCentral'>
         <article className='CardCartItem'>
             <header className="HeaderCartItem">
                 <h2 className="ItemHeaderCartItem">
@@ -19,20 +20,17 @@ const CartItem = ({ id, name, quantity, price, img }) => {
             </header>
             <section className='ContainerItemCartItem'>
                 <img src={img} alt={name} className="ItemImg"/>
-                <p className="InfoCartItem">
-                    Cantidad: {quantity}
-                </p>
-                <p className="InfoCartItem">
-                    Precio x Unidad: ${price}
-                </p>
+                <p className="InfoCartItem">Cantidad: {quantity}</p>
+                <p className="InfoCartItem">Precio x Unidad: ${price}</p>
             </section>
             <footer className='ItemFooterCartItem'>
                  <p className="InfoCartItem">
                      Subtotal: ${price * quantity}
                  </p>
-                 <button className='ButtonCartItem' onClick={() => handleRemove()}>Remover</button>
+                 <button className='fila bordeTablaProductos btnProductoRemover' onClick={() => handleRemove()}>Remover</button>
             </footer>
         </article>
+        </div>
     )
 }
 
