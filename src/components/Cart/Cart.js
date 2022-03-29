@@ -67,7 +67,7 @@ const Cart = () => {
                 })
 
         } else {
-             setNotification('error', 'Debe completar los datos de contacto para generar la orden')
+             setNotification('error', 'Debe completar los datos de contacto para generar la compra')
         }
     }
 
@@ -78,8 +78,8 @@ const Cart = () => {
     if(products.length === 0) {
         return (
             <div>
-                <h1>Cart</h1>
-                <h2>No hay productos en el carrito, <Link to={`/`}>volver a menu principal</Link></h2>
+                <h1>Carrito de compras</h1>
+                <p className='carritoClean'>No hay productos en el carrito, <Link to={`/`}>volver a menu principal</Link></p>
             </div>
         )
     }
@@ -89,21 +89,22 @@ const Cart = () => {
             <h1>Carrito de compras</h1>
             { products.map(p => <CartItem key={p.id} {...p}/>) }
             <h3>Total: ${getTotal()}</h3>
-            <button onClick={() => clearCart()} className="fila bordeTablaProductos btnProducto">Cancelar compra</button>
+            <button onClick={() => clearCart()} className="fila bordeTablaProductos btnProducto">Cancelar Compra</button>
             <button onClick={() => confirmOrder()} className="fila bordeTablaProductos btnProducto">Confirmar Compra</button>
             {
                 (contact.phone !== '' && contact.address !== '' && contact.comment !== '' && contact.name !== '') &&
 
-                    <div>
-                        <h4>Nombre: {contact.name}</h4>
-                        <h4>Telefono: {contact.phone}</h4>
-                        <h4>Direccion: {contact.address}</h4>
-                        <h4>Comentario: {contact.comment}</h4>
-                        <button onClick={() => setContact({ phone: '', address: '', comment: ''})}
-                                className='Button'
-                                style={{backgroundColor: '#db4025'}}>
-                            Borrar datos de contacto
-                        </button>
+                    <div className='fullFormDetail'>
+                        <h1>Datos de contacto</h1>
+                        <div className='columnDetail col-6'>
+                            <p className='fullForm col-6'>Nombre: {contact.name}</p>
+                            <p className='fullForm col-6'>Telefono: {contact.phone}</p>
+                        </div>
+                        <div className='columnDetail col-6'>
+                            <p className='fullForm col-6'>Direccion: {contact.address}</p>
+                            <p className='fullForm col-6'>Comentario: {contact.comment}</p>
+                        </div>
+                        <button className='fila bordeTablaProductos btnProducto' onClick={() => setContact({ phone: '', address: '', comment: ''})}> Borrar datos de contacto </button>
                     </div>
             }
             <Togglable buttonLabelShow={

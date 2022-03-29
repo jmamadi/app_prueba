@@ -1,3 +1,27 @@
+.PrincipalContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px;
+}
+
+.PrincipalContainerBase{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px;
+}
+
+.ContactContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #BF8F73;
+    border-radius: 10px;
+}
+
+
 .ContactForm {
     display: flex;
     flex-direction: column;
@@ -15,11 +39,10 @@
 
 .InputContact {
     border-style: none;
-    border-bottom: 2px solid #8C30F5;
-    width: 85vw;
-    height: 20px;
+    border-bottom: 2px solid #BF8F73;
+    width: 35vw;
     margin-top: 10px;
-    padding: 8px 5px;
+    padding: 0px 0px;
     background: transparent;
     outline: none;
 }
@@ -30,4 +53,91 @@
 .InputContact:-webkit-autofill:active  {
   transition: background-color 5000s;
   -webkit-text-fill-color: #fff !important;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2D1C9;
+    text-decoration: none;
+}
+
+.bordeTablaProductos {
+    border-width: 2px;
+    border-color: #BF8F73;
+    border-style: solid;
+    padding: 2rem;
+    margin: 0.1rem;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btnConfirmarInfo {
+    text-decoration: none;
+    color: grey;
+    flex: none;
+    display: inline-block;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.btnConfirmarInfo:hover {
+    background-color: #BF8F99;
+    text-decoration: none;
+    color: black;
+}
+
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-5 {
+  width: 41.66667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66667%;
+}
+
+.col-12 {
+  width: 100%;
 }

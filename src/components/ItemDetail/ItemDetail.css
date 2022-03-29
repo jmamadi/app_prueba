@@ -1,5 +1,19 @@
+.titulo{
+    font-size: 25px;
+    color: #BF8F73;
+}
+
+.subtitulo{
+    font-size: 15px;
+    color: #BF8F73;
+}
+
+.precio {
+    color: grey
+}
+
 p {
-    
+    color: grey
 }
 
 .CardItem {
@@ -112,12 +126,6 @@ p {
 }
 
 .btnProducto:hover {
-    background-color: #BF8F99;
-    text-decoration: none;
-    color: black;
-}
-
-.btnProductoVacio {
     background-color: #BF8F99;
     text-decoration: none;
     color: black;

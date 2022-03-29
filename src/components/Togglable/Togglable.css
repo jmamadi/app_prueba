@@ -1,0 +1,44 @@
+.buttonContact {
+    background-color: #F2D1C9;
+    border-width: 2px;
+    border-color: #BF8F73;
+    border-style: solid;
+    padding: 0.1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    color: grey;
+    order: 1;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+}
+
+.buttonContact:hover{
+    background-color: #85f272;
+    text-decoration: none;
+    color: black;
+}
+
+.buttonCancel {
+    background-color: #F2D1C9;
+    border-width: 2px;
+    border-color: #BF8F73;
+    border-style: solid;
+    padding: 0.1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    color: grey;
+    order: 1;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+}
+
+.buttonCancel:hover{
+    background-color: #e3543b;
+    text-decoration: none;
+    color: black;
+}
+

@@ -14,7 +14,7 @@ h1{
     align-items: center;
     width: 80%;
     padding: 10px;
-    margin: 30px;
+    margin: 10px;
     font-size: 15px;
     border: 1px solid #BF8F73;
     border-radius: 10px;
@@ -30,7 +30,7 @@ h1{
 
 .ItemHeaderCartItem {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     align-items: center;
     color: #BF8F73;
@@ -38,7 +38,7 @@ h1{
 
 .InfoCartItem {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     align-items: center;
     color: #BF8F73;
@@ -98,7 +98,6 @@ h1{
 .btnProducto {
     text-decoration: none;
     color: grey;
-
     flex: none;
     display: inline-block;
     order: 1;
@@ -115,6 +114,56 @@ h1{
 }
 
 .btnProductoRemover {
+    display: flex;
+    justify-content: center;
     background-color: #BF8F99;
     color: black;
+}
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-5 {
+  width: 41.66667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66667%;
+}
+
+.col-12 {
+  width: 100%;
 }

@@ -1,3 +1,7 @@
+h3 {
+    color: #BF8F73;
+}
+
 .fila {
     display: flex;
     flex-direction: row;
@@ -5,6 +9,45 @@
     align-items: center;
     background-color: #F2D1C9;
     text-decoration: none;
+}
+
+.carritoClean{
+    color: #BF8F73;
+    text-decoration: none;
+    margin-top: 3rem;
+}
+
+.fullForm {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #BF8F73;
+    font-size: 15px;
+}
+
+.fullFormDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #BF8F73;
+    font-size: 15px;
+    padding: 0.1rem;
+    margin-top: 3rem;
+    border-radius: 10px;
+
+}
+
+.columnDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: space-around;
+    align-items: space-around;
+    color: #BF8F73;
+    font-size: 15px;
 }
 
 .bordeTablaProductos {
@@ -20,7 +63,6 @@
 .btnProducto {
     text-decoration: none;
     color: grey;
-
     flex: none;
     display: inline-block;
     order: 1;
@@ -34,26 +76,4 @@
     background-color: #BF8F99;
     text-decoration: none;
     color: black;
-}
-
-.Button {
-    width: auto;
-    margin: 5px;
-    padding-top: 12px;
-    font-size: 8px;
-    background: brown;
-    border-radius: 8px;
-    flex: none;
-    display: inline-block;
-    order: 1;
-    align-self: center;
-    flex-grow: 0;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    border: none;
-    border-style: none;
-    cursor: pointer;
-    outline: inherit;
 }
