@@ -1,14 +1,9 @@
-h1{
-    font-size: 20px;
-    color: #BF8F73;
-}
-
 .EstiloCuadroIndividual {
     display: flex;
     flex-direction: column;
     border: 2px;
     margin: 10px;
-    width: 800px;
+    width: 250px;
     justify-content: space-around;
     align-items: center;
 }
@@ -17,23 +12,6 @@ h1{
     display: flex;
     justify-content: space-around;
     color: grey;
-}
-
-.ItemHeader {
-    display: flex;
-    justify-content: center;
-}
-
-.ItemImg {
-    width: auto;
-    object-fit: cover;
-    object-position: center;
-    justify-content: center;
-}
-
-.ItemFooter {
-    display: flex;
-    justify-content: center;
 }
 
 .fila {
