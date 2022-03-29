@@ -1,5 +1,5 @@
-import { useState, useContext, useRef } from 'react'
 import './Cart.css'
+import { useState, useContext, useRef } from 'react'
 import Togglable from '../Togglable/Togglable'
 import ContactForm from '../ContactForm/ContactForm'
 import CartContext from '../../context/CartContext'
@@ -89,8 +89,8 @@ const Cart = () => {
             <h1>Cart</h1>
             { products.map(p => <CartItem key={p.id} {...p}/>) }
             <h3>Total: ${getTotal()}</h3>
-            <button onClick={() => clearCart()} className="Button">Cancelar compra</button>
-            <button onClick={() => confirmOrder()} className="Button">Confirmar Compra</button>
+            <button onClick={() => clearCart()} className="fila bordeTablaProductos btnProducto">Cancelar compra</button>
+            <button onClick={() => confirmOrder()} className="fila bordeTablaProductos btnProducto">Confirmar Compra</button>
             {
                 (contact.phone !== '' && contact.address !== '' && contact.comment !== '' && contact.name !== '') &&
 

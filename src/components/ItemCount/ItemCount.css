@@ -3,16 +3,20 @@ h1{
     color: #BF8F73;
 }
 
-.EstiloCuadro {
+.EstiloCuadroIndividual {
     display: flex;
     flex-direction: column;
-    align-items: right;
-    justify-content: center;
-    border: 4px solid #BF8F73;
+    border: 2px;
     margin: 10px;
-    width: 200px;
-    padding: 2px;
-    text-decoration: none;
+    width: 800px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Info {
+    display: flex;
+    justify-content: space-around;
+    color: grey;
 }
 
 .ItemHeader {

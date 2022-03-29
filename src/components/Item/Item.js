@@ -3,21 +3,14 @@ import { Link } from 'react-router-dom'
 
 const Item = ({product}) => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                border: '2px solid brown',
-                margin: '10px',
-            }}
-        >
+        <div className='EstiloCuadro'>
             <h1 className="ItemHeader">{product.name}</h1>
             <picture>
             <img src={product.img} alt={product.name} className="ItemImg"/>
             </picture>
-            <h2 className="Info">$ {product.price}</h2>
+            <p className="Info">$ {product.price}</p>
             <footer className='ItemFooter'>
-                <Link to={`/detail/${product.id}`} className="DetailButton">Ver detalle</Link>
+                <Link to={`/detail/${product.id}`} className="fila bordeTablaProductos btnProducto">Ver detalle</Link>
             </footer>
         </div>
     );

@@ -1,3 +1,41 @@
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2D1C9;
+    text-decoration: none;
+}
+
+.bordeTablaProductos {
+    border-width: 2px;
+    border-color: #BF8F73;
+    border-style: solid;
+    padding: 0.1rem;
+    margin: 0.1rem;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btnProducto {
+    text-decoration: none;
+    color: grey;
+
+    flex: none;
+    display: inline-block;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnProducto:hover {
+    background-color: #BF8F99;
+    text-decoration: none;
+    color: black;
+}
+
 .Button {
     width: auto;
     margin: 5px;
